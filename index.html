@@ -6,6 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="web.css">
+    <link rel="stylesheet" href="mobil.css" media="(max-width: 1000px)" />
+   <style>
+    .dataTables_paginate{
+      position: absolute;
+      bottom: 0;
+   
+ 
+    }
+    .paginate_button{
+    
+    background-color: #96a825;
+    font-size: large;
+    color: white;
+    padding: 2px 6px 2px 6px;  
+    border: solid gainsboro 1px;
+      
+
+    }
+    #exchange-one-information-table_paginate,#exchange-one-information-table_paginate span{
+      display: flex;
+
+    }
+  
+   </style>
 </head>
 <body>
     <div class="nav">
@@ -94,18 +118,18 @@
             <div class="exchange" >
                 <div class="exchange-create-order">
                     <div class="exchange-order-side">  
-                      <input id="exchange-one-asks-side" type="radio" name="side" checked>
+                      <input id="exchange-one-asks-side" type="radio" name="oneSide" checked>
                       <label for="exchange-one-asks-side"> ALIŞ</label>
-                      <input id="exchange-one-bids-side" type="radio" name="side">
+                      <input id="exchange-one-bids-side" type="radio" name="oneSide">
                       <label for="exchange-one-bids-side">SATIŞ</label>
                   </div>
             </div>
             <div class="exchange-order-type">
-                <input id="exchange-one-limit" type="radio" name="type" checked>
+                <input id="exchange-one-limit" type="radio" name="oneType" checked>
                 <label for="exchange-one-limit"> LİMİT</label>
-                <input id="exchange-one-piyasa" type="radio" name="type">
+                <input id="exchange-one-piyasa" type="radio" name="oneType">
                 <label for="exchange-one-piyasa">PİYASA</label>
-                <input id="exchange-one-if" type="radio" name="type">
+                <input id="exchange-one-if" type="radio" name="oneType">
                 <label for="exchange-one-if">KOŞUL</label>
             </div>
 
@@ -120,27 +144,121 @@
             </div>
 
             <div class="exchange-order-book">
-     
-                  <table id="exchange-one-asks-table" class="datatablee">
+              <div class="exchange-order-book-title">
+                <span>Bekleyen Satış Emirleri</span>
+                <span>Bekleyen Alış Emirleri</span>
+              </div>
+                  <table id="exchange-one-book-table" class="order-book-table">
                     <thead>
                       <tr>
-                        <th>Fiyat(TL)</th>
-                        <th>Miktar(BTC)</th>
-                        <th>Toplam(TL)</th>
+                        <th>(TL) <br/> Fiyat</th>
+                        <th>(BTC) <br/>Miktar</th>
+                        <th>(TL) <br/>Toplam</th>
+                        <th>(TL) <br/>Fiyat</th>
+                        <th>(BTC) <br/>Miktar</th>
+                        <th>(TL) <br/>Toplam</th>
                       </tr>
                     </thead>
                   </table>
-         
-     
-              
+          </div>
+
+          <div class="exchange-order-information">
+            <input id="exchange-one-all-open-orders" type="radio" name="ordersTabOne" checked>
+            <label for="exchange-one-all-open-orders"> Açık Emirler</label>
+            <input id="exchange-one-all-close-orders" type="radio" name="ordersTabOne">
+            <label for="exchange-one-all-close-orders">Emir Geçmişi</label>
+            <input id="exchange-one-all-market-orders" type="radio" name="ordersTabOne">
+            <label for="exchange-one-all-market-orders"> Piyasa Geçmişi</label>
+          </div>
+          <div class="exchange-order-information-table">
+            <table id="exchange-one-information-table" class="order-book-table">
+              <thead>
+                <tr>
+                  <th ><button>Tüm İptal</button></th>
+                  <th>Zaman</th>
+                  <th>Fiyat</th>
+                  <th>Adet</th>
+                  <th>T.Adet</th>
+                  <th>Toplam</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+
+            </div>
+            
+
+            <div class="exchange" >
+              <div class="exchange-create-order">
+                  <div class="exchange-order-side">  
+                    <input id="exchange-two-asks-side" type="radio" name="twoSide" checked>
+                    <label for="exchange-two-asks-side"> ALIŞ</label>
+                    <input id="exchange-two-bids-side" type="radio" name="twoSide">
+                    <label for="exchange-two-bids-side">SATIŞ</label>
                 </div>
-          
-            </div>
+          </div>
+          <div class="exchange-order-type">
+              <input id="exchange-two-limit" type="radio" name="twoType" checked>
+              <label for="exchange-two-limit"> LİMİT</label>
+              <input id="exchange-two-piyasa" type="radio" name="twoType">
+              <label for="exchange-two-piyasa">PİYASA</label>
+              <input id="exchange-two-if" type="radio" name="twoType">
+              <label for="exchange-two-if">KOŞUL</label>
+          </div>
 
+          <div class="exchange-order-amount">
+              <div class="exchange-order-amount-switch">
+                  <input id="exchange-two-triger" type="text" name="triger" placeholder="Koşul (TL)" autocomplete='off'>
+                  <input id="exchange-two-price" type="text" name="amount" placeholder="Fiyat (TL)" autocomplete='off'>
+              </div>
+              <input id="exchange-two-amount" type="text" name="amount" placeholder="Miktar (ARG)" autocomplete='off'>
+              <input id="exchange-two-total" type="text" name="amount" placeholder="Toplam (TL)" autocomplete='off'>
+              <button id="exchange-two-order-button">ALIŞ EMRİ VER</button>
+          </div>
 
-            <div class="exchange" id="exchange-two">
-                
+          <div class="exchange-order-book">
+            <div class="exchange-order-book-title">
+              <span>Bekleyen Satış Emirleri</span>
+              <span>Bekleyen Alış Emirleri</span>
             </div>
+                <table id="exchange-two-book-table" class="order-book-table">
+                  <thead>
+                    <tr>
+                      <th>(TL) <br/> Fiyat</th>
+                      <th>(BTC) <br/>Miktar</th>
+                      <th>(TL) <br/>Toplam</th>
+                      <th>(TL) <br/>Fiyat</th>
+                      <th>(BTC) <br/>Miktar</th>
+                      <th>(TL) <br/>Toplam</th>
+                    </tr>
+                  </thead>
+                </table>
+        </div>
+
+        <div class="exchange-order-information">
+          <input id="exchange-two-all-open-orders" type="radio" name="ordersTabTwo" checked>
+          <label for="exchange-two-all-open-orders"> Açık Emirler</label>
+          <input id="exchange-two-all-close-orders" type="radio" name="ordersTabTwo">
+          <label for="exchange-two-all-close-orders">Emir Geçmişi</label>
+          <input id="exchange-two-all-market-orders" type="radio" name="ordersTabTwo">
+          <label for="exchange-two-all-market-orders"> Piyasa Geçmişi</label>
+        </div>
+        <div class="exchange-order-information-table">
+          <table id="exchange-two-information-table" class="order-book-table">
+            <thead>
+              <tr>
+                <th ><button>Tüm İptal</button></th>
+                <th>Zaman</th>
+                <th>Fiyat</th>
+                <th>Adet</th>
+                <th>T.Adet</th>
+                <th>Toplam</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+
+          </div>
         </div>
     </div>
 
