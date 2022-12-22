@@ -1,0 +1,252 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+::-webkit-scrollbar {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+/* Nav Start*/
+.nav {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-size: 1em;
+    background-color: #96a825;
+  }
+
+  .nav-item{
+    text-decoration: none;
+    color: white;
+    margin-right: 1%;
+    
+}
+/* Nav End*/
+
+/* Market Start*/
+
+#market-page{
+    width: 100%;
+    height: 94%;
+    
+}
+
+/* Market End*/
+
+/* Arbitrage-detail Start*/
+
+#arbitrage-detail{
+    width: 100%;
+    height: 4%;
+    background-color: rgba(0, 0, 0, 0);
+    border: solid gainsboro 1px;
+}
+#arbitrage-detail-table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #arbitrage-detail-table td,
+  #arbitrage-detail-table th {
+    font-size: 12px;
+    text-align: center;
+  }
+  
+
+/* Arbitrage-detail End*/
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 96.8%;
+
+}
+.container input[type=radio]{
+    display: none;
+}
+
+.container input[type=radio]+label{
+    display: inline-block;
+    padding: 0.5%;
+    width: 100%;
+    text-align: center;
+}
+.container :hover {
+    cursor: pointer;
+  }
+
+#arbitrage-section{
+    width: 35%;
+    height: 98%;
+    margin: 2px;
+    padding: 5px;
+    border: solid gainsboro 1px;
+    border-radius: 5px;
+}
+#arbitrage-section input:checked + label {
+    color: green;
+    border-bottom: solid green 1px;
+  }
+
+#arbitrage-alarm-options{
+   display: flex;
+   width: 98%;
+   border: solid gainsboro 1px;
+   padding: 5px;
+   margin-bottom: 1%;
+  
+}
+#arbitrage-alarm-options input{
+    width: 10%;
+}
+#arbitrage-alarm-sound{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+#arbitrage-alarm-notification{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#arbitrage-arbitrage-list-search{
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    align-items: center;
+    border: solid gainsboro 1px;
+    
+}
+#arbitrage-list-search-input{
+    width: 100%;
+}
+
+#arbitrage-chain-tabs{
+    display: flex;
+    width: 100%;
+    margin-top: 1%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    border: solid gainsboro 1px;
+}
+
+#arbitrage  {
+    max-height: 78vh;
+    overflow: auto;
+  }
+
+
+#arbitrage-table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #arbitrage-table td,
+  #arbitrage-table th {
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+  }
+  
+  #arbitrage-table tr:hover {
+    background-color: #ddd;
+  }
+
+
+  .exchange{
+    width: 32.5%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+  }
+.exchange-order-side{
+    display: flex;
+    width: 100%;
+    margin: 0.5%;
+    justify-content: right;
+    align-items: center;
+    border: solid gainsboro 1px;
+    border-radius: 5px;
+
+}
+
+.exchange-order-side input:checked + label[for=exchange-one-asks-side] {
+    color: green;
+    border-bottom: solid green 1px;
+  }
+  
+  .exchange-order-side input:checked + label[for=exchange-one-bids-side] {
+    color: red;
+    border-bottom: solid red 1px;
+  }
+  .exchange-order-type{
+    width: 100%;
+    display: flex;
+    margin: 0.5%;
+    
+  }
+  .exchange-order-type label {
+    width: 50%;
+    color: #555555;
+    border: solid gainsboro 1px;
+    border-radius: 5px;
+  }
+
+  .exchange-order-type input:checked + label {
+    color: white;
+    background-color: gray;
+  }
+
+  .exchange-order-amount{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: solid gainsboro 1px;
+    border-radius: 5px;
+    padding-bottom: 1%;
+  }
+  .exchange-order-amount-switch{
+    display: flex;
+    width: 100%; 
+    }
+
+  .exchange-order-amount input{
+    all: unset;
+    background-color: white;
+    width: 100%;
+    margin: 2% 0.5% 2% 0;
+    border-bottom: solid 1px black;  
+    
+}
+.exchange-order-amount-switch input[name=triger]{
+    display: none;
+  }
+  .exchange-order-amount button{
+    background-color: #96a825;
+    color: white;
+    border: solid gainsboro 1px;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  .exchange-order-book{
+    display: flex;
+    width: 100%;
+  }
+
+  
+

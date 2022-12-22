@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="web.css">
+</head>
+<body>
+    <div class="nav">
+        <a class="nav-item" href="#market">Piyasalar</a>
+        <a class="nav-item"href="#wallet">Cüzdan</a>
+        <a class="nav-item"href="#login">Giriş</a>
+    </div>
+
+    <div id="market-page">
+        <div id="arbitrage-detail">
+            <table id="arbitrage-detail-table">
+                <thead>
+                    <tr>
+                      <th>Coin</th>
+                      <th>Borsa</th>
+                      <th>Al</th>
+                      <th>Hacim</th>
+                      <th>Borsa</th>
+                      <th>Sat</th>
+                      <th>Hacim</th>
+                      <th>KAR</th>
+                    </tr>
+                  </thead>
+              </table>
+        </div>
+
+        <div class="container">
+            <div id="arbitrage-section">
+                <div id="arbitrage-alarm-options">
+                    <div id="arbitrage-alarm-sound">
+                        <label for="arbitrage-alarm-sound-input"> &#128266;</label>
+                        <input id="arbitrage-alarm-sound-input" type="number" >
+                        <span id="arbitrage-alarm-sound-status">Çalmıyor</span>
+                        <button id="arbitrage-alarm-sound-button">Kapalı</button>
+
+                    </div>
+                    <div id="arbitrage-alarm-notification">
+                        <label for="arbitrage-alarm-notification-input"> &#128276;</label>
+                        <input id="arbitrage-alarm-notification-input" type="number">
+                        <span id="arbitrage-alarm-notification-status">Çalmıyor</span>
+                        <button id="arbitrage-alarm-notification-button" >Kapalı</button>
+                    </div>
+                  </div>
+                <div id="arbitrage-arbitrage-list-search">
+                    <input id="arbitrage-list-search-input" type="search" placeholder="&#128269"/>
+                    <input id="arbitrage-exchange-tabs-cexdex" type="radio" name="exchange-tabs" checked />
+                    <label for="arbitrage-exchange-tabs-cexdex">CEX-DEX</label>
+                    <input id="arbitrage-exchange-tabs-cexcex" type="radio" name="exchange-tabs" />
+                    <label for="arbitrage-exchange-tabs-cexcex">CEX-CEX</label>
+                    <input id="arbitrage-exchange-tabs-dexdex" type="radio" name="exchange-tabs" />
+                    <label for="arbitrage-exchange-tabs-dexdex">DEX-DEX</label>
+                    
+                </div>
+                
+                  <div id="arbitrage-chain-tabs">
+                    <input id="arbitrage-chain-tabs-all" type="radio" name="chain-tabs" checked />
+                    <label for="arbitrage-chain-tabs-all"> TUMU</label>
+                    <input id="arbitrage-chain-tabs-bsc" type="radio" name="chain-tabs" />
+                    <label for="arbitrage-chain-tabs-bsc">BSC</label>
+                    <input id="arbitrage-chain-tabs-matic" type="radio" name="chain-tabs" />
+                    <label for="arbitrage-chain-tabs-matic">MATIC</label>
+                    <input id="arbitrage-chain-tabs-sol" type="radio" name="chain-tabs" />
+                    <label for="arbitrage-chain-tabs-sol"> SOL</label>
+                    <input id="arbitrage-chain-tabs-apt" type="radio" name="chain-tabs" />
+                    <label for="arbitrage-chain-tabs-apt"> APT</label>
+                  </div>
+               
+                  <div id="arbitrage">
+                    <table id="arbitrage-table">
+                        <thead>
+                          <tr>
+                            <th>Coin</th>
+                            <th>Borsa</th>
+                            <th>Al</th>
+                            <th>Hacim</th>
+                            <th>Borsa</th>
+                            <th>Sat</th>
+                            <th>Hacim</th>
+                            <th>KAR</th>
+                          </tr>
+                        </thead>
+                      </table>
+                  </div>
+            </div>
+
+            <div class="exchange" >
+                <div class="exchange-create-order">
+                    <div class="exchange-order-side">  
+                      <input id="exchange-one-asks-side" type="radio" name="side" checked>
+                      <label for="exchange-one-asks-side"> ALIŞ</label>
+                      <input id="exchange-one-bids-side" type="radio" name="side">
+                      <label for="exchange-one-bids-side">SATIŞ</label>
+                  </div>
+            </div>
+            <div class="exchange-order-type">
+                <input id="exchange-one-limit" type="radio" name="type" checked>
+                <label for="exchange-one-limit"> LİMİT</label>
+                <input id="exchange-one-piyasa" type="radio" name="type">
+                <label for="exchange-one-piyasa">PİYASA</label>
+                <input id="exchange-one-if" type="radio" name="type">
+                <label for="exchange-one-if">KOŞUL</label>
+            </div>
+
+            <div class="exchange-order-amount">
+                <div class="exchange-order-amount-switch">
+                    <input id="exchange-one-triger" type="text" name="triger" placeholder="Koşul (TL)" autocomplete='off'>
+                    <input id="exchange-one-price" type="text" name="amount" placeholder="Fiyat (TL)" autocomplete='off'>
+                </div>
+                <input id="exchange-one-amount" type="text" name="amount" placeholder="Miktar (ARG)" autocomplete='off'>
+                <input id="exchange-one-total" type="text" name="amount" placeholder="Toplam (TL)" autocomplete='off'>
+                <button id="exchange-one-order-button">ALIŞ EMRİ VER</button>
+            </div>
+
+            <div class="exchange-order-book">
+     
+                  <table id="exchange-one-asks-table" class="datatablee">
+                    <thead>
+                      <tr>
+                        <th>Fiyat(TL)</th>
+                        <th>Miktar(BTC)</th>
+                        <th>Toplam(TL)</th>
+                      </tr>
+                    </thead>
+                  </table>
+         
+     
+              
+                </div>
+          
+            </div>
+
+
+            <div class="exchange" id="exchange-two">
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script src="table.js"></script>
+</body>
+</html>
