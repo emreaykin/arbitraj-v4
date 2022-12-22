@@ -1,11 +1,43 @@
-
-
-
-
-/* 
-.#arbitrage-section{
+#arbitrage-section{
     width: 100%;
-}
-.exchange{
+ }
+ 
+ .exchange{
+     width: 100%;
+     display: none;
+ }
+ 
+ .nav{
+   
+   position:fixed;
+   bottom: 0;
+
+ }
+ .nav-item{
+     font-size: 22px;
+     margin-left: 8%;
+     margin-right: 9%;
+ }
+ #arbitrage-detail{
     display: none;
-}*/
+    height: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 2%;
+ }
+ #exchange-one-information-table_paginate{
+  padding-top: 1%;
+  padding-bottom: 12%;
+
+ }
+ .paginate_button{
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.dataTables_paginate{
+  position:unset;
+ }
+.paginate_button + span>a{
+  padding-top: 14%;
+ 
+}

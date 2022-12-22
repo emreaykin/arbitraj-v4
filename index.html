@@ -6,28 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="web.css">
-    <link rel="stylesheet" href="mobil.css" media="(max-width: 1000px)" />
+    <link rel="stylesheet" href="mobil.css" media="(max-width: 1030px)" />
    <style>
-    .dataTables_paginate{
-      position: absolute;
-      bottom: 0;
-   
- 
-    }
-    .paginate_button{
     
-    background-color: #96a825;
-    font-size: large;
-    color: white;
-    padding: 2px 6px 2px 6px;  
-    border: solid gainsboro 1px;
-      
-
-    }
-    #exchange-one-information-table_paginate,#exchange-one-information-table_paginate span{
-      display: flex;
-
-    }
+ 
   
    </style>
 </head>
@@ -60,7 +42,7 @@
             <div id="arbitrage-section">
                 <div id="arbitrage-alarm-options">
                     <div id="arbitrage-alarm-sound">
-                        <label for="arbitrage-alarm-sound-input"> &#128266;</label>
+                        <label for="arbitrage-alarm-sound-input" onwheel="return false;"> &#128266;</label>
                         <input id="arbitrage-alarm-sound-input" type="number" >
                         <span id="arbitrage-alarm-sound-status">Çalmıyor</span>
                         <button id="arbitrage-alarm-sound-button">Kapalı</button>
@@ -74,7 +56,7 @@
                     </div>
                   </div>
                 <div id="arbitrage-arbitrage-list-search">
-                    <input id="arbitrage-list-search-input" type="search" placeholder="&#128269"/>
+                  &#128269; <input id="arbitrage-list-search-input" type="search" placeholder=""/>
                     <input id="arbitrage-exchange-tabs-cexdex" type="radio" name="exchange-tabs" checked />
                     <label for="arbitrage-exchange-tabs-cexdex">CEX-DEX</label>
                     <input id="arbitrage-exchange-tabs-cexcex" type="radio" name="exchange-tabs" />
@@ -115,7 +97,7 @@
                   </div>
             </div>
 
-            <div class="exchange" >
+            <div class="exchange" id="one-exchange" >
                 <div class="exchange-create-order">
                     <div class="exchange-order-side">  
                       <input id="exchange-one-asks-side" type="radio" name="oneSide" checked>
@@ -145,8 +127,9 @@
 
             <div class="exchange-order-book">
               <div class="exchange-order-book-title">
-                <span>Bekleyen Satış Emirleri</span>
-                <span>Bekleyen Alış Emirleri</span>
+                <span class="book-title">Bekleyen Satış Emirleri</span>
+                <span class="book-title">|</span>
+                <span class="book-title">Bekleyen Alış Emirleri</span>
               </div>
                   <table id="exchange-one-book-table" class="order-book-table">
                     <thead>
@@ -162,7 +145,7 @@
                   </table>
           </div>
 
-          <div class="exchange-order-information">
+          <div class="exchange-order-information" >
             <input id="exchange-one-all-open-orders" type="radio" name="ordersTabOne" checked>
             <label for="exchange-one-all-open-orders"> Açık Emirler</label>
             <input id="exchange-one-all-close-orders" type="radio" name="ordersTabOne">
@@ -188,7 +171,7 @@
             </div>
             
 
-            <div class="exchange" >
+            <div class="exchange" id="two-exchange">
               <div class="exchange-create-order">
                   <div class="exchange-order-side">  
                     <input id="exchange-two-asks-side" type="radio" name="twoSide" checked>
@@ -259,11 +242,15 @@
         </div>
 
           </div>
+          
+           
+
         </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
     <script src="table.js"></script>
+    <script src="style.js"></script>
 </body>
 </html>

@@ -3,8 +3,16 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 100vh;
+  height: 94vh;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+
 ::-webkit-scrollbar {
     display: none;
     visibility: hidden;
@@ -65,7 +73,7 @@ body {
 .container{
     display: flex;
     width: 100%;
-    height: 96.8%;
+    height: 100%;
 
 }
 .container input[type=radio]{
@@ -86,12 +94,10 @@ body {
 
 
 #arbitrage-section{
-    width: 35%;
-    height: 98%;
     margin: 2px;
     padding: 5px;
-    border: solid gainsboro 1px;
     border-radius: 5px;
+    height: 100%;
 }
 #arbitrage-section input:checked + label {
     color: green;
@@ -100,14 +106,14 @@ body {
 
 #arbitrage-alarm-options{
    display: flex;
-   width: 98%;
+
    border: solid gainsboro 1px;
    padding: 5px;
    margin-bottom: 1%;
   
 }
 #arbitrage-alarm-options input{
-    width: 10%;
+    width: 12%;
 }
 #arbitrage-alarm-sound{
     width: 50%;
@@ -144,7 +150,7 @@ body {
 }
 
 #arbitrage  {
-    max-height: 78vh;
+  max-height: 89.8%;
     overflow: auto;
   }
 
@@ -169,8 +175,15 @@ body {
   }
 
 
+
+
+
+
+
+
+  
   .exchange{
-    width: 32.5%;
+    width: 32.4%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -178,7 +191,8 @@ body {
   }
 .exchange-order-side{
     display: flex;
-    margin: 0.5%;
+    margin-top: 5px;
+    margin-bottom: 5px;
     justify-content: right;
     align-items: center;
     border: solid gainsboro 1px;
@@ -188,16 +202,16 @@ body {
 
 .exchange-order-side input:checked + label[for=exchange-one-asks-side] {
     color: green;
-    border-bottom: solid green 1px;
+  
   }
   
   .exchange-order-side input:checked + label[for=exchange-one-bids-side] {
     color: red;
-    border-bottom: solid red 1px;
+   
   }
   .exchange-order-type{
     display: flex;
-    margin: 0.5%;
+    margin-bottom: 5px;
     
   }
   .exchange-order-type label {
@@ -216,7 +230,7 @@ body {
     flex-direction: column;
     border: solid gainsboro 1px;
     border-radius: 5px;
-    padding-bottom: 1%;
+    padding-bottom: 5px;
   }
   .exchange-order-amount-switch{
     display: flex;
@@ -226,8 +240,9 @@ body {
     all: unset;
     background-color: white;
     width: 100%;
-    margin: 2% 0.5% 2% 0;
-    border-bottom: solid 1px black;  
+    margin-top: 9px;
+    margin-bottom: 9px;
+    border-bottom: solid gainsboro 1px; 
     
 }
 .exchange-order-amount-switch input[name=triger]{
@@ -238,31 +253,33 @@ body {
     color: white;
     border: solid gainsboro 1px;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 18px;
   }
 
   .exchange-order-book-title{
     font-family: Arial, Helvetica, sans-serif;
-
     display: flex; 
     justify-content: space-around;
     border: solid gainsboro 1px;
     border-radius: 5px;
+    font-size: 17px;
+    margin-top: 2%;
+    margin-bottom: 2%;
   }
+
   .order-book-table{
     font-family: Arial, Helvetica, sans-serif;
     border: solid #ddd 1px;
     border-collapse: collapse;
- 
     width: 100%;
   }
   
   .order-book-table td,
   .order-book-table th {
     border-bottom: solid #ddd 1px;
-    font-size: 12px;
-    padding-top: 8px;
-    padding-bottom: 9px;
+    font-size: 1.5vh;
+    padding-top: 4.6px;
+    padding-bottom:  4.6px;
     text-align: center;
   }
   
@@ -271,19 +288,27 @@ body {
   }
 
   .exchange-order-information{
+    margin-top: 3.2%;
+    margin-bottom: 1%;
     display: flex;
     width: 100%;
     border-bottom: solid #ddd 1px;
   }
 
-  .exchange-order-information input:checked + label {
-    color: green;
-    border-bottom: solid green 1px;
-  }
-  .exchange-order-information-table{
-    height: 100%;
-    border: solid #ddd 1px;
-    
-  };
 
+.dataTables_paginate{
+    position: fixed;
+    bottom: 0;
+   }
+     .paginate_button{
+     
+     background-color: #96a825;
+     font-size: large;
+     color: white;
+     padding: 2px 6px 2px 6px;  
+     border: solid gainsboro 1px;
+     }
+     #exchange-one-information-table_paginate,#exchange-one-information-table_paginate span{
+       display: flex;
  
+     }
