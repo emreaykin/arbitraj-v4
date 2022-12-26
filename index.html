@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale = 0.86, maximum-scale=3.0, minimum-scale=0.86">
     <title>Document</title>
+
     <link rel="stylesheet" href="web.css">
-    <link rel="stylesheet" href="mobil.css" media="(max-width: 1030px)" />
+    <link rel='stylesheet' href='mobil.css' media='(max-width: 1290px)'>
    <style>
     
  
@@ -128,7 +129,6 @@
             <div class="exchange-order-book">
               <div class="exchange-order-book-title">
                 <span class="book-title">Bekleyen Satış Emirleri</span>
-                <span class="book-title">|</span>
                 <span class="book-title">Bekleyen Alış Emirleri</span>
               </div>
                   <table id="exchange-one-book-table" class="order-book-table">
@@ -170,8 +170,7 @@
 
             </div>
             
-
-            <div class="exchange" id="two-exchange">
+            <div class="exchange" id="two-exchange" >
               <div class="exchange-create-order">
                   <div class="exchange-order-side">  
                     <input id="exchange-two-asks-side" type="radio" name="twoSide" checked>
@@ -201,8 +200,8 @@
 
           <div class="exchange-order-book">
             <div class="exchange-order-book-title">
-              <span>Bekleyen Satış Emirleri</span>
-              <span>Bekleyen Alış Emirleri</span>
+              <span class="book-title">Bekleyen Satış Emirleri</span>
+              <span class="book-title">Bekleyen Alış Emirleri</span>
             </div>
                 <table id="exchange-two-book-table" class="order-book-table">
                   <thead>
@@ -218,12 +217,12 @@
                 </table>
         </div>
 
-        <div class="exchange-order-information">
-          <input id="exchange-two-all-open-orders" type="radio" name="ordersTabTwo" checked>
+        <div class="exchange-order-information" >
+          <input id="exchange-two-all-open-orders" type="radio" name="ordersTabtwo" checked>
           <label for="exchange-two-all-open-orders"> Açık Emirler</label>
-          <input id="exchange-two-all-close-orders" type="radio" name="ordersTabTwo">
+          <input id="exchange-two-all-close-orders" type="radio" name="ordersTabtwo">
           <label for="exchange-two-all-close-orders">Emir Geçmişi</label>
-          <input id="exchange-two-all-market-orders" type="radio" name="ordersTabTwo">
+          <input id="exchange-two-all-market-orders" type="radio" name="ordersTabtwo">
           <label for="exchange-two-all-market-orders"> Piyasa Geçmişi</label>
         </div>
         <div class="exchange-order-information-table">
@@ -242,7 +241,9 @@
         </div>
 
           </div>
+      
           
+
            
 
         </div>

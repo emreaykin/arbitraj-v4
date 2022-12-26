@@ -1,43 +1,39 @@
-#arbitrage-section{
-    width: 100%;
- }
- 
- .exchange{
-     width: 100%;
-     display: none;
- }
- 
- .nav{
-   
-   position:fixed;
-   bottom: 0;
-
- }
- .nav-item{
-     font-size: 22px;
-     margin-left: 8%;
-     margin-right: 9%;
- }
- #arbitrage-detail{
-    display: none;
-    height: 5%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    margin-bottom: 2%;
- }
- #exchange-one-information-table_paginate{
-  padding-top: 1%;
-  padding-bottom: 12%;
-
- }
- .paginate_button{
-  padding-top: 2%;
-  padding-bottom: 2%;
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column-reverse;
 }
-.dataTables_paginate{
-  position:unset;
- }
-.paginate_button + span>a{
-  padding-top: 14%;
- 
+.exchange {
+  display: none;
+}
+
+#arbitrage-detail {
+  height: 6%;
+  display: none;
+  width: 98%;
+  margin-left: 1%;
+  margin-top: 10px;
+  padding-top: 3%;
+}
+#arbitrage-section {
+  width: 100%;
+}
+.nav {
+  justify-content: space-around;
+  font-size: 18px;
+}
+.container {
+  height: 100%;
+}
+
+#arbitrage {
+  overflow: auto;
+}
+.exchange {
+  width: 100%;
+  overflow: auto;
+}
+
+#exchange-one-information-table_paginate {
+  margin-bottom: 10%;
 }

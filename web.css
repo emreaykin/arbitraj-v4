@@ -1,90 +1,91 @@
-html,
-body {
+html {
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 94vh;
+  height: 100vh;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
-
 ::-webkit-scrollbar {
-    display: none;
-    visibility: hidden;
-    opacity: 0;
-  }
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
 /* Nav Start*/
 .nav {
-    width: 100%;
-    height: 5%;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    font-size: 1em;
-    background-color: #96a825;
-  }
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  font-size: 1em;
+  background-color: #96a825;
+}
 
-  .nav-item{
-    text-decoration: none;
-    color: white;
-    margin-right: 1%;
-    
+.nav-item {
+  text-decoration: none;
+  color: white;
+  margin-right: 1%;
 }
 /* Nav End*/
 
 /* Market Start*/
 
-#market-page{
-    width: 100%;
-    height: 94%;
-    
+#market-page {
+  width: 100%;
+  height: 95%;
 }
 
 /* Market End*/
 
 /* Arbitrage-detail Start*/
 
-#arbitrage-detail{
-    width: 100%;
-    height: 4%;
-    background-color: rgba(0, 0, 0, 0);
-    border: solid gainsboro 1px;
+#arbitrage-detail {
+  width: 100%;
+
+  height: 4%;
+  background-color: rgba(0, 0, 0, 0);
+  border: solid gainsboro 1px;
 }
 #arbitrage-detail-table {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  #arbitrage-detail-table td,
-  #arbitrage-detail-table th {
-    font-size: 12px;
-    text-align: center;
-  }
-  
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#arbitrage-detail-table td,
+#arbitrage-detail-table th {
+  font-size: 12px;
+  text-align: center;
+}
 
 /* Arbitrage-detail End*/
 
-.container{
-    display: flex;
-    width: 100%;
-    height: 100%;
-
+.container {
+  display: flex;
+  width: 100%;
+  height: 94%;
 }
-.container input[type=radio]{
-    display: none;
+.container input[type="radio"] {
+  display: none;
 }
 
-.container input[type=radio]+label{
-    display: inline-block;
-    padding: 0.5%;
-    width: 100%;
-    text-align: center;
+.container input[type="radio"] + label {
+  display: inline-block;
+  padding: 0.5%;
+  width: 100%;
+  text-align: center;
 }
 /* 
 .container :hover {
@@ -92,223 +93,233 @@ input::-webkit-inner-spin-button {
 
   }*/
 
-
-#arbitrage-section{
-    margin: 2px;
-    padding: 5px;
-    border-radius: 5px;
-    height: 100%;
+#arbitrage-section {
+  padding: 5px;
+  border-radius: 5px;
+  height: 100%;
 }
 #arbitrage-section input:checked + label {
-    color: green;
-    border-bottom: solid green 1px;
-  }
-
-#arbitrage-alarm-options{
-   display: flex;
-
-   border: solid gainsboro 1px;
-   padding: 5px;
-   margin-bottom: 1%;
-  
-}
-#arbitrage-alarm-options input{
-    width: 12%;
-}
-#arbitrage-alarm-sound{
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    
-}
-#arbitrage-alarm-notification{
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
+  color: green;
+  border-bottom: solid green 1px;
 }
 
-#arbitrage-arbitrage-list-search{
-    display: flex;
-    width: 100%;
-    justify-content: right;
-    align-items: center;
-    border: solid gainsboro 1px;
-    
+#arbitrage-alarm-options {
+  display: flex;
+
+  border: solid gainsboro 1px;
+  padding: 5px;
+  margin-bottom: 1%;
 }
-#arbitrage-list-search-input{
-    width: 100%;
+#arbitrage-alarm-options input {
+  width: 12%;
+}
+#arbitrage-alarm-sound {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+#arbitrage-alarm-notification {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
 }
 
-#arbitrage-chain-tabs{
-    display: flex;
-    width: 100%;
-    margin-top: 1%;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    border: solid gainsboro 1px;
+#arbitrage-arbitrage-list-search {
+  display: flex;
+  width: 100%;
+  justify-content: right;
+  align-items: center;
+  border: solid gainsboro 1px;
+}
+#arbitrage-list-search-input {
+  width: 100%;
 }
 
-#arbitrage  {
-  max-height: 89.8%;
-    overflow: auto;
-  }
+#arbitrage-chain-tabs {
+  display: flex;
+  width: 100%;
+  margin-top: 1%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  border: solid gainsboro 1px;
+}
 
+#arbitrage {
+  max-height: 89%;
+  overflow: auto;
+}
 
 #arbitrage-table {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  #arbitrage-table td,
-  #arbitrage-table th {
-    border-bottom: 1px solid #ddd;
-    font-size: 12px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    text-align: center;
-  }
-  
-  #arbitrage-table tr:hover {
-    background-color: #ddd;
-  }
-
-
-
-
-
-
-
-
-  
-  .exchange{
-    width: 32.4%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    
-  }
-.exchange-order-side{
-    display: flex;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    justify-content: right;
-    align-items: center;
-    border: solid gainsboro 1px;
-    border-radius: 5px;
-
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
 
-.exchange-order-side input:checked + label[for=exchange-one-asks-side] {
-    color: green;
-  
-  }
-  
-  .exchange-order-side input:checked + label[for=exchange-one-bids-side] {
-    color: red;
-   
-  }
-  .exchange-order-type{
-    display: flex;
-    margin-bottom: 5px;
-    
-  }
-  .exchange-order-type label {
-    color: #555555;
-    border: solid gainsboro 1px;
-    border-radius: 5px;
-  }
-
-  .exchange-order-type input:checked + label {
-    color: white;
-    background-color: gray;
-  }
-
-  .exchange-order-amount{
-    display: flex;
-    flex-direction: column;
-    border: solid gainsboro 1px;
-    border-radius: 5px;
-    padding-bottom: 5px;
-  }
-  .exchange-order-amount-switch{
-    display: flex;
-    }
-
-  .exchange-order-amount input{
-    all: unset;
-    background-color: white;
-    width: 100%;
-    margin-top: 9px;
-    margin-bottom: 9px;
-    border-bottom: solid gainsboro 1px; 
-    
+#arbitrage-table td,
+#arbitrage-table th {
+  border-bottom: 1px solid #ddd;
+  font-size: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
 }
-.exchange-order-amount-switch input[name=triger]{
-    display: none;
-  }
-  .exchange-order-amount button{
-    background-color: #96a825;
-    color: white;
-    border: solid gainsboro 1px;
-    border-radius: 5px;
-    font-size: 18px;
-  }
 
-  .exchange-order-book-title{
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex; 
-    justify-content: space-around;
-    border: solid gainsboro 1px;
-    border-radius: 5px;
-    font-size: 17px;
-    margin-top: 2%;
-    margin-bottom: 2%;
-  }
+#arbitrage-table tr:hover {
+  background-color: #ddd;
+}
 
-  .order-book-table{
-    font-family: Arial, Helvetica, sans-serif;
-    border: solid #ddd 1px;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  .order-book-table td,
-  .order-book-table th {
-    border-bottom: solid #ddd 1px;
-    font-size: 1.5vh;
-    padding-top: 4.6px;
-    padding-bottom:  4.6px;
-    text-align: center;
-  }
-  
-  .order-book-table tr:hover {
-    background-color: #ddd;
-  }
+.exchange {
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 32.4%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.exchange-order-side {
+  display: flex;
+  margin-top: 7px;
+  margin-bottom: 15px;
+  color: rgb(149, 148, 148);
+  justify-content: right;
+  align-items: center;
+  border: solid gainsboro 1px;
+  border-radius: 5px;
+}
 
-  .exchange-order-information{
-    margin-top: 3.2%;
-    margin-bottom: 1%;
-    display: flex;
-    width: 100%;
-    border-bottom: solid #ddd 1px;
+.exchange-order-side input:checked + label[for="exchange-one-asks-side"],
+.exchange-order-side input:checked + label[for="exchange-two-asks-side"] {
+  color: #96a825;
+  border-bottom: solid #96a825 2px;
+}
+
+.exchange-order-side input:checked + label[for="exchange-one-bids-side"],
+.exchange-order-side input:checked + label[for="exchange-two-bids-side"] {
+  color: #e84362;
+  border-bottom: solid #e84362 2px;
+}
+.exchange-order-type {
+  display: flex;
+  margin-bottom: 3%;
+}
+.exchange-order-type label {
+  color: #555555;
+  border: solid gainsboro 1px;
+  border-radius: 5px;
+}
+
+.exchange-order-type input:checked + label {
+  color: white;
+  background-color: gray;
+}
+
+.exchange-order-amount {
+  display: flex;
+  flex-direction: column;
+  border: solid gainsboro 1px;
+  padding-bottom: 5px;
+}
+.exchange-order-amount-switch {
+  display: flex;
+}
+
+.exchange-order-amount input {
+  all: unset;
+  background-color: white;
+  width: 98%;
+  margin-top: 15px;
+  margin-left: 1%;
+  margin-right: 1%;
+  border-bottom: solid gainsboro 1px;
+}
+.exchange-order-amount-switch input[name="triger"] {
+  display: none;
+}
+.exchange-order-amount button {
+  background-color: #96a825;
+  margin-top: 15px;
+  margin-left: 1%;
+  margin-right: 1%;
+  color: white;
+  border: solid gainsboro 1px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.exchange-order-book-title {
+  display: flex;
+  font-size: 17px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.book-title {
+  border: solid gainsboro 1px;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+  width: 100%;
+}
+.exchange-order-book-title .book-title:nth-child(1) {
+  background-color: #e84362;
+}
+.exchange-order-book-title .book-title:nth-child(2) {
+  background-color: #96a825;
+}
+.order-book-table {
+  border: solid #ddd 1px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.order-book-table td,
+.order-book-table th {
+  border-bottom: solid #ddd 1px;
+  font-size: 13px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  text-align: center;
+}
+
+.order-book-table tr:hover {
+  background-color: #ddd;
+}
+
+.exchange-order-information {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 1%;
+  margin-right: 1%;
+  display: flex;
+  width: 97%;
+  border: solid #ddd 1px;
+}
+.exchange-order-information input:checked + label {
+  color: white;
+  background-color: #96a825;
+}
+.paginate_button {
+  background-color: #96a825;
+  font-size: large;
+  color: white;
+  padding: 2px 6px 2px 6px;
+  border: solid gainsboro 1px;
+}
+
+/*.exchange-order-information-table{
+    min-height: 30vh;
+    position: relative;
   }
-
-
-.dataTables_paginate{
-    position: fixed;
-    bottom: 0;
-   }
      .paginate_button{
-     
      background-color: #96a825;
      font-size: large;
      color: white;
      padding: 2px 6px 2px 6px;  
      border: solid gainsboro 1px;
      }
-     #exchange-one-information-table_paginate,#exchange-one-information-table_paginate span{
-       display: flex;
+     #exchange-one-information-table_paginate{
+      position: absolute;
+      bottom: -10px;
  
-     }
+     }*/

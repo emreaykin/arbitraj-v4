@@ -7,23 +7,25 @@ var arbitrageDetailTable = $("#arbitrage-detail-table").DataTable({
   bPaginate: false,
   searching: false,
   bInfo: false,
-  ordering: false
+  ordering: false,
 });
 var exchangeOneBookTable = $("#exchange-one-book-table").DataTable({
   bPaginate: false,
   searching: false,
   bInfo: false,
+  ordering: false,
 });
 var exchangeTwoBookTable = $("#exchange-two-book-table").DataTable({
   bPaginate: false,
   searching: false,
   bInfo: false,
+  ordering: false,
 });
 var exchangeOneInformationTable = $(
   "#exchange-one-information-table"
 ).DataTable({
   lengthChange: false,
-  lengthMenu: [[9]],
+  lengthMenu: [[7]],
   searching: false,
   bInfo: false,
 });
@@ -32,12 +34,11 @@ var exchangeTwoInformationTable = $(
   "#exchange-two-information-table"
 ).DataTable({
   lengthChange: false,
-  lengthMenu: [[9]],
+  lengthMenu: [[7]],
 
   searching: false,
   bInfo: false,
 });
-
 
 for (let i = 0; i < 30; i++) {
   arbitrageTable.row
@@ -61,12 +62,13 @@ arbitrageDetailTable.row
   .add(["BTC", "Binance", "0.00123", 100000, "Huobi", "0.00135", 100000, 34])
   .draw(false);
 
-for (let i = 0; i < 6; i++) {
+for (let i = 0; i < 8; i++) {
   exchangeOneBookTable.row
     .add([0.00123, 10000, 5023, 0.00123, 10000, 5023])
     .draw(false);
 }
-for (let i = 0; i < 6; i++) {
+
+for (let i = 0; i < 8; i++) {
   exchangeTwoBookTable.row
     .add([0.00123, 10000, 5023, 0.00123, 10000, 5023])
     .draw(false);
